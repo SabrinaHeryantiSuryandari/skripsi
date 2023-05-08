@@ -34,14 +34,17 @@ class MenuResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
+                    // FileUpload::make('gambar')
+                    // ->imagePreviewHeight('250')
+                    // ->loadingIndicatorPosition('left')
+                    // ->panelAspectRatio('2:1')
+                    // ->panelLayout('integrated')
+                    // ->removeUploadedFileButtonPosition('right')
+                    // ->uploadButtonPosition('left')
+                    // ->uploadProgressIndicatorPosition('left')
+                    // ->disk('public')->required(),
                     FileUpload::make('gambar')
-                    ->imagePreviewHeight('250')
-                    ->loadingIndicatorPosition('left')
-                    ->panelAspectRatio('2:1')
-                    ->panelLayout('integrated')
-                    ->removeUploadedFileButtonPosition('right')
-                    ->uploadButtonPosition('left')
-                    ->uploadProgressIndicatorPosition('left'),
+                    ->disk('public')->required(),
                     TextInput::make('nama_menu'),
                     Textarea::make('deskripsi_menu'),
                     TextInput::make('harga')
@@ -55,7 +58,7 @@ class MenuResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('gambar')
-                ->label('Gambar'),
+                ->label('Gambar')->disk('public'),
                 TextColumn::make('nama_menu'),
                 TextColumn::make('deskripsi_menu'),
                 TextColumn::make('harga')
