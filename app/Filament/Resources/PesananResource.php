@@ -31,6 +31,13 @@ class PesananResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
+    public function total()
+    {
+        return 
+        'menu.harga' * 'pesanan.jumlah_pesanan'
+        ;
+    }
+
     public static function form(Form $form): Form
     {
         return $form

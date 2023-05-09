@@ -13,4 +13,11 @@ class ValidasiPesanan extends Model
     {
         return $this->belongsTo(Pesanan::class);
     }
+
+    // public function total()
+    // {
+    //     return 
+    //     $menu->harga * $pesanan->jumlah_pesanan
+    //     ;
+    // }
 }

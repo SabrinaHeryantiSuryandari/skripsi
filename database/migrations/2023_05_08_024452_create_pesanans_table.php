@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->constrained();
-            $table->integer('menu_id')->constrained();
+            $table->integer('users_id')->constrained();
+            $table->integer('menus_id')->constrained();
             $table->date('tanggal_pesanan');
             $table->biginteger('jumlah_pesanan');
             $table->text('keterangan')->nullable()->default(0);

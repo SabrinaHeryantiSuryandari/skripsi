@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('validasi_pesanans', function (Blueprint $table) {
             $table->id();
-            $table->integer('pesanan_id')->constrained();
+            $table->integer('pesanans_id')->constrained();
             $table->biginteger('total');
             $table->string('status')->nullable()->default('pembayaran');
             $table->timestamps();

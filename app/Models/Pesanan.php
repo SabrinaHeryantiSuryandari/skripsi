@@ -23,4 +23,11 @@ class Pesanan extends Model
     {
         return $this->hasMany(ValidasiPesanan::class);
     }
+
+    // public function total()
+    // {
+    //     return $_POST[Menu.] * $_POST[angka2]
+    //     $menu->harga * $pesanan->jumlah_pesanan
+    //     ;
+    // }
 }

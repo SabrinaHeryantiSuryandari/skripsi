@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('tanggal');
             $table->biginteger('hasil');
-            $table->biginteger('clustering');
+            $table->integer('validasi_pesanans_id')->constrained();
             $table->timestamps();
         });
     }
